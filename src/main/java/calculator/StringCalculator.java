@@ -21,5 +21,23 @@ class StringCalculator {
                                    3);
 
             }
+           var numbers = input.ToCharArray().Where(x => !delimeters.Contains(x)).ToList();
+
+            if (numbers.Any(x => x == '-'))
+            {
+                StringBuilder stringBuilder= new StringBuilder();
+                for (int i = 0;
+                     i < numbers.Count;
+                     i++)
+                {
+                    if (numbers[i] == '-')
+                    {
+                        stringBuilder.Append("-");
+                        stringBuilder.Append(numbers[++i]);
+                        stringBuilder.Append(", ");
+                    }    
     }
+                   throw new Exception(string.Format("negative numbers not allowed",stringBuilder.ToString()));
+            }
+        
 }
