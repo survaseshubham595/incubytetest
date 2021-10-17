@@ -12,6 +12,14 @@ class StringCalculator {
                                     {
                                         '\n',',' //numbers separated by commas
                                     };
-      
+        
+        if (input[0] == '/')
+            {
+                var customDelimeter = input[2];
+                delimeters.Add(customDelimeter);
+                input = input.Remove(0,
+                                   3);
+
+            }
     }
 }
