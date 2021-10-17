@@ -39,5 +39,8 @@ class StringCalculator {
     }
                    throw new Exception(string.Format("negative numbers not allowed",stringBuilder.ToString()));
             }
+          var sum = numbers.Sum(x => (int)Char.GetNumericValue(x));
+
+            return sum;
         
 }
